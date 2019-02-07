@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import IBMMobileFirstPlatformFoundation
 
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         navigationItem.hidesBackButton = true
         super.viewDidLoad()
+        // Check for model update
+        WLClient.sharedInstance()?.downloadModelUpdate(completionHandler: { (status, response) in
+        }, showProgressBar: true)
     }
-    
 
+    @IBAction func logout(_ sender: Any) {
+        WLAuthorizationManager.sharedInstance()?.logout( UserLoginChallengeHandler.securityCheckName, withCompletionHandler: { (error) in
+           self.navigationController?.popViewController(animated: true)
+        })
+    }
     /*
     // MARK: - Navigation
 

@@ -29,7 +29,7 @@
         <!--ACME Insurance-->
         <scene sceneID="pvg-cx-waz">
             <objects>
-                <viewController storyboardIdentifier="UserLoginViewController" id="fsg-I1-K6K" customClass="ViewController" customModule="mfp_Insurance" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserLoginViewController" id="fsg-I1-K6K" customClass="LoginViewController" customModule="mfp_Insurance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KS5-5h-GKB"/>
                         <viewControllerLayoutGuide type="bottom" id="VkD-rC-807"/>
@@ -71,7 +71,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="xo9-1w-XwH" kind="show" id="7Iz-ZE-F4X"/>
+                                            <action selector="login:" destination="fsg-I1-K6K" eventType="touchUpInside" id="Snv-aX-jXf"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="center" distribution="fillProportionally" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="anM-P7-gHS">
@@ -130,6 +130,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="ACME Insurance" id="fCM-0u-XI2"/>
                     <connections>
+                        <outlet property="password" destination="N8r-yY-iJU" id="0pN-xR-MMp"/>
+                        <outlet property="username" destination="Oaw-jQ-Sqh" id="JeO-k8-LH9"/>
                         <segue destination="xo9-1w-XwH" kind="show" id="ZhI-K7-2Os"/>
                     </connections>
                 </viewController>
@@ -137,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="1801" y="24"/>
         </scene>
-        <!--Vitral-->
+        <!--Home-->
         <scene sceneID="Dwn-5G-rgj">
             <objects>
-                <viewController title="Vitral" id="xo9-1w-XwH" customClass="HomeViewController" customModule="mfp_Insurance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xo9-1w-XwH" customClass="HomeViewController" customModule="mfp_Insurance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="47E-XA-hOd"/>
                         <viewControllerLayoutGuide type="bottom" id="FA4-zE-pRO"/>
@@ -249,7 +251,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="UhE-c4-7Ko">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="sDg-fM-EeE"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="sDg-fM-EeE">
+                            <connections>
+                                <action selector="logout:" destination="xo9-1w-XwH" id="cht-Mv-3YD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -457,7 +463,4 @@
         <image name="fire.png" width="512" height="512"/>
         <image name="firstPageImage" width="292.55999755859375" height="219.60000610351562"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="7Iz-ZE-F4X"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -146,9 +146,9 @@ class ImageClassificationViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                 }
                 else {
-                   message = "Looks like there is no damage"
+                    message = "Looks like there is no damage"
                     let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "OkAY", style: UIAlertAction.Style.cancel, handler: {(alert: UIAlertAction!) in
+                    alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.cancel, handler: {(alert: UIAlertAction!) in
                         self.classificationLabel.text = "Choose a car pic to analyze a damage"
                     }))
                     self.present(alert, animated: true, completion: nil)
