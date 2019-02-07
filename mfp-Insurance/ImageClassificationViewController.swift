@@ -58,20 +58,12 @@ class ImageClassificationViewController: UIViewController {
                     return item.absoluteString.lowercased().contains(searchText.lowercased())
                 }
             }
-            filterContentForSearchText(searchText: "watson.mlmodel")
+            filterContentForSearchText(searchText: "insurance.mlmodel")
             if(!filterdItemsArray.isEmpty) {
                 let compiledUrl = try MLModel.compileModel(at: filterdItemsArray[0])
                 let mlModel = try MLModel(contentsOf: compiledUrl)
                 model = try VNCoreMLModel(for: mlModel)
-//                let alert = UIAlertController(title: "Alert", message: "Model Loaded from direct update", preferredStyle: UIAlertControllerStyle.alert)
-//                alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil))
-//                // self.present(alert, animated: true, completion: nil)
-            } else {
-//                let alert = UIAlertController(title: "Alert", message: "Default Model Loaded", preferredStyle: UIAlertControllerStyle.alert)
-//                alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil))
-//                // self.present(alert, animated: true, completion: nil)
-            }
-            
+            } 
             // Create visual recognition request using Core ML model
             let request = VNCoreMLRequest(model: model) { [weak self] request, error in
                 self?.processClassifications(for: request, error: error)

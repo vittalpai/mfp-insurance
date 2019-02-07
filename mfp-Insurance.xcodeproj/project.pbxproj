@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		69F8198ED18F938108D35EBF /* Pods_mfp_Insurance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20E32B19A146493E04A9593 /* Pods_mfp_Insurance.framework */; };
 		C7342391220C0D1D00211373 /* mfpclient.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7342390220C0D1C00211373 /* mfpclient.plist */; };
-		C7342395220C376600211373 /* watson.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C7342394220C376600211373 /* watson.mlmodel */; };
+		C7342395220C376600211373 /* insurance.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C7342394220C376600211373 /* insurance.mlmodel */; };
 		C7342397220C40C200211373 /* Damage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7342396220C40C200211373 /* Damage.swift */; };
 		C7342399220C411C00211373 /* AnalyzerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7342398220C411C00211373 /* AnalyzerViewController.swift */; };
 		C734239B220C439C00211373 /* DamageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C734239A220C439C00211373 /* DamageViewCell.swift */; };
@@ -50,7 +50,7 @@
 		788A882FA44F830CE9D7B54A /* Pods-mfp-Insurance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mfp-Insurance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance.debug.xcconfig"; sourceTree = "<group>"; };
 		A974F865F2709B654D8ABECB /* Pods-mfp-Insurance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mfp-Insurance.release.xcconfig"; path = "Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance.release.xcconfig"; sourceTree = "<group>"; };
 		C7342390220C0D1C00211373 /* mfpclient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mfpclient.plist; sourceTree = "<group>"; };
-		C7342394220C376600211373 /* watson.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = watson.mlmodel; sourceTree = "<group>"; };
+		C7342394220C376600211373 /* insurance.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = insurance.mlmodel; sourceTree = "<group>"; };
 		C7342396220C40C200211373 /* Damage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damage.swift; sourceTree = "<group>"; };
 		C7342398220C411C00211373 /* AnalyzerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzerViewController.swift; sourceTree = "<group>"; };
 		C734239A220C439C00211373 /* DamageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamageViewCell.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 				C796999421E32D6A00B4E7C2 /* Main.storyboard */,
 				C7B9DBC921E323A7002D71D7 /* LoginViewController.swift */,
 				C7B9DBCE21E323AA002D71D7 /* Assets.xcassets */,
-				C7342394220C376600211373 /* watson.mlmodel */,
+				C7342394220C376600211373 /* insurance.mlmodel */,
 				C7B9DBD021E323AA002D71D7 /* LaunchScreen.storyboard */,
 				C7B9DBD321E323AA002D71D7 /* Info.plist */,
 				C796999721E32DB000B4E7C2 /* Images */,
@@ -317,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7342395220C376600211373 /* watson.mlmodel in Sources */,
+				C7342395220C376600211373 /* insurance.mlmodel in Sources */,
 				C734239D220C693500211373 /* UserLoginChallengeHandler.swift in Sources */,
 				C7E3677C2202FF220048951B /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				C7B9DBCA21E323A7002D71D7 /* LoginViewController.swift in Sources */,
