@@ -473,6 +473,7 @@
 			baseConfigurationReference = 788A882FA44F830CE9D7B54A /* Pods-mfp-Insurance.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TN6YQNGLXP;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -496,6 +497,7 @@
 			baseConfigurationReference = A974F865F2709B654D8ABECB /* Pods-mfp-Insurance.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TN6YQNGLXP;
 				FRAMEWORK_SEARCH_PATHS = (
