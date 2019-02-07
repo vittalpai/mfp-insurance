@@ -87,26 +87,26 @@ class ImageClassificationViewController: UIViewController {
         DispatchQueue.global(qos: .userInitiated).async {
             let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
             DispatchQueue.main.async {
-//                WLClient.sharedInstance().downloadModelUpdate(completionHandler: { (status,resp) in
-//                    if(resp != nil && status != nil) {
-//                        print("votta" + status!);
-//                        ImageClassificationViewController.path = resp!
-//                    } else if(resp == nil && status != nil) {
-//                        let alert = UIAlertController(title: "Alert", message: "This Model is not authentic or might be corrupted", preferredStyle: UIAlertControllerStyle.alert)
-//                        alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil))
-//                        self.present(alert, animated: true, completion: nil)
-//                    }
-//                    do {
-//                        try handler.perform([self.classificationRequest])
-//                    } catch {
-//                        /*
-//                         This handler catches general image processing errors. The `classificationRequest`'s
-//                         completion handler `processClassifications(_:error:)` catches errors specific
-//                         to processing that request.
-//                         */
-//                        print("Failed to perform classification.\n\(error.localizedDescription)")
-//                    }
-//                }, hideProgressBar: false)
+                WLClient.sharedInstance()?.downloadModelUpdate(completionHandler: { (status,resp) in
+                    if(resp != nil && status != nil) {
+                        print("votta" + status!);
+                        ImageClassificationViewController.path = resp!
+                    } else if(resp == nil && status != nil) {
+                        let alert = UIAlertController(title: "Alert", message: "This Model is not authentic or might be corrupted", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil))
+                     //   self.present(alert, animated: true, completion: nil)
+                    }
+                    do {
+                        try handler.perform([self.classificationRequest])
+                    } catch {
+                        /*
+                         This handler catches general image processing errors. The `classificationRequest`'s
+                         completion handler `processClassifications(_:error:)` catches errors specific
+                         to processing that request.
+                         */
+                        print("Failed to perform classification.\n\(error.localizedDescription)")
+                    }
+                }, showProgressBar: false)
              }
         }
     }
@@ -126,9 +126,32 @@ class ImageClassificationViewController: UIViewController {
             } else {
                 // Display top classification ranked by confidence in the UI.
                 //self.classificationLabel.text = "Classification: " + classifications[0].identifier
-                self.classificationLabel.text = "Classification: \(classifications[0].identifier) \nConfidence Level : \(classifications[0].confidence*100) %"
+                var message = ""
+                if ( classifications[0].identifier != "Negative" ) {
+                    message = "Damage Type : " + classifications[0].identifier + "\n" + "Approximate Cost : " + self.fetchDamageAmount(damageType: classifications[0].identifier);
+                }
+                else {
+                   message = "Looks like there is no damage"
+                }
+                
+//                self.classificationLabel.text = "Classification: \(classifications[0].identifier) \nConfidence Level : \(classifications[0].confidence*100) %"
+                let alert = UIAlertController(title: "Report", message: message, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Submit Report", style: UIAlertAction.Style.default, handler: {(alert: UIAlertAction!) in
+                    self.navigationController?.popViewController(animated: true)
+                }))
+                
+                
+                
+                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {(alert: UIAlertAction!) in
+                   self.classificationLabel.text = "Choose a car pic to analyze a damage"
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
         }
+    }
+    
+    func fetchDamageAmount(damageType: String) -> String {
+        return "$25,000" ;
     }
     
     // MARK: - Photo Actions
@@ -168,7 +191,7 @@ class ImageClassificationViewController: UIViewController {
 extension ImageClassificationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: - Handling Image Picker Selection
     
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         picker.dismiss(animated: true)
         
         // We always expect `imagePickerController(:didFinishPickingMediaWithInfo:)` to supply the original image.

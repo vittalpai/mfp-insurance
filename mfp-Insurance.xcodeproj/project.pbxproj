@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69F8198ED18F938108D35EBF /* Pods_mfp_Insurance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20E32B19A146493E04A9593 /* Pods_mfp_Insurance.framework */; };
+		C7342391220C0D1D00211373 /* mfpclient.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7342390220C0D1C00211373 /* mfpclient.plist */; };
+		C7342395220C376600211373 /* watson.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C7342394220C376600211373 /* watson.mlmodel */; };
 		C796999621E32D6A00B4E7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C796999421E32D6A00B4E7C2 /* Main.storyboard */; };
 		C79699A521E32DB000B4E7C2 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = C796999821E32DB000B4E7C2 /* check.png */; };
 		C79699A721E32DB000B4E7C2 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = C796999A21E32DB000B4E7C2 /* empty.png */; };
@@ -23,9 +26,6 @@
 		C7B9DBD221E323AA002D71D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B9DBD021E323AA002D71D7 /* LaunchScreen.storyboard */; };
 		C7E3677B2202FF220048951B /* ImageClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E367792202FF210048951B /* ImageClassificationViewController.swift */; };
 		C7E3677C2202FF220048951B /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3677A2202FF220048951B /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
-		C7E367802203018F0048951B /* watson.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C7E3677F2203018F0048951B /* watson.mlmodel */; };
-		C7E36781220303800048951B /* IBMMobileFirstPlatformFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E3677D2202FF870048951B /* IBMMobileFirstPlatformFoundation.framework */; };
-		C7E36782220303800048951B /* IBMMobileFirstPlatformFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7E3677D2202FF870048951B /* IBMMobileFirstPlatformFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7E3678522030F470048951B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3678422030F470048951B /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C7E36782220303800048951B /* IBMMobileFirstPlatformFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +43,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		788A882FA44F830CE9D7B54A /* Pods-mfp-Insurance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mfp-Insurance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance.debug.xcconfig"; sourceTree = "<group>"; };
+		A974F865F2709B654D8ABECB /* Pods-mfp-Insurance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mfp-Insurance.release.xcconfig"; path = "Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance.release.xcconfig"; sourceTree = "<group>"; };
+		C7342390220C0D1C00211373 /* mfpclient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mfpclient.plist; sourceTree = "<group>"; };
+		C7342394220C376600211373 /* watson.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = watson.mlmodel; sourceTree = "<group>"; };
 		C796999521E32D6A00B4E7C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C796999821E32DB000B4E7C2 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		C796999A21E32DB000B4E7C2 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = "<group>"; };
@@ -62,9 +65,8 @@
 		C7B9DBD321E323AA002D71D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7E367792202FF210048951B /* ImageClassificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationViewController.swift; sourceTree = "<group>"; };
 		C7E3677A2202FF220048951B /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
-		C7E3677D2202FF870048951B /* IBMMobileFirstPlatformFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IBMMobileFirstPlatformFoundation.framework; sourceTree = "<group>"; };
-		C7E3677F2203018F0048951B /* watson.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = watson.mlmodel; sourceTree = "<group>"; };
 		C7E3678422030F470048951B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D20E32B19A146493E04A9593 /* Pods_mfp_Insurance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mfp_Insurance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,13 +74,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7E36781220303800048951B /* IBMMobileFirstPlatformFoundation.framework in Frameworks */,
+				69F8198ED18F938108D35EBF /* Pods_mfp_Insurance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B1CE34B5FCD56BC63ACA3FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D20E32B19A146493E04A9593 /* Pods_mfp_Insurance.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C796999721E32DB000B4E7C2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +108,11 @@
 		C7B9DBBB21E323A7002D71D7 = {
 			isa = PBXGroup;
 			children = (
+				C7342390220C0D1C00211373 /* mfpclient.plist */,
 				C7B9DBC621E323A7002D71D7 /* mfp-Insurance */,
 				C7B9DBC521E323A7002D71D7 /* Products */,
+				CCFAAD70A59BAF06CFDA240F /* Pods */,
+				3B1CE34B5FCD56BC63ACA3FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,13 +134,21 @@
 				C796999421E32D6A00B4E7C2 /* Main.storyboard */,
 				C7B9DBC921E323A7002D71D7 /* ViewController.swift */,
 				C7B9DBCE21E323AA002D71D7 /* Assets.xcassets */,
-				C7E3677F2203018F0048951B /* watson.mlmodel */,
+				C7342394220C376600211373 /* watson.mlmodel */,
 				C7B9DBD021E323AA002D71D7 /* LaunchScreen.storyboard */,
 				C7B9DBD321E323AA002D71D7 /* Info.plist */,
-				C7E3677D2202FF870048951B /* IBMMobileFirstPlatformFoundation.framework */,
 				C796999721E32DB000B4E7C2 /* Images */,
 			);
 			path = "mfp-Insurance";
+			sourceTree = "<group>";
+		};
+		CCFAAD70A59BAF06CFDA240F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				788A882FA44F830CE9D7B54A /* Pods-mfp-Insurance.debug.xcconfig */,
+				A974F865F2709B654D8ABECB /* Pods-mfp-Insurance.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,10 +158,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7B9DBD621E323AA002D71D7 /* Build configuration list for PBXNativeTarget "mfp-Insurance" */;
 			buildPhases = (
+				C2F7282A93EF7B4E485B4B9D /* [CP] Check Pods Manifest.lock */,
 				C7B9DBC021E323A7002D71D7 /* Sources */,
 				C7B9DBC121E323A7002D71D7 /* Frameworks */,
 				C7B9DBC221E323A7002D71D7 /* Resources */,
 				C7E36783220303800048951B /* Embed Frameworks */,
+				8A0997889FFA68EFEEF9CF9A /* [CP] Embed Pods Frameworks */,
+				90F1B5324C37B81E95119D61 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +220,7 @@
 				C79699BB21E32FED00B4E7C2 /* accident.png in Resources */,
 				C79699BF21E32FED00B4E7C2 /* fire.png in Resources */,
 				C79699BE21E32FED00B4E7C2 /* shield.png in Resources */,
+				C7342391220C0D1D00211373 /* mfpclient.plist in Resources */,
 				C7B9DBD221E323AA002D71D7 /* LaunchScreen.storyboard in Resources */,
 				C79699A521E32DB000B4E7C2 /* check.png in Resources */,
 				C7B9DBCF21E323AA002D71D7 /* Assets.xcassets in Resources */,
@@ -206,13 +231,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8A0997889FFA68EFEEF9CF9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-frameworks.sh",
+				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Frameworks/IBMMobileFirstPlatformFoundation.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBMMobileFirstPlatformFoundation.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90F1B5324C37B81E95119D61 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-resources.sh",
+				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Resources/Localizations.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Localizations.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2F7282A93EF7B4E485B4B9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mfp-Insurance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C7B9DBC021E323A7002D71D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7342395220C376600211373 /* watson.mlmodel in Sources */,
 				C7E3677C2202FF220048951B /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
-				C7E367802203018F0048951B /* watson.mlmodel in Sources */,
 				C7B9DBCA21E323A7002D71D7 /* ViewController.swift in Sources */,
 				C7B9DBC821E323A7002D71D7 /* AppDelegate.swift in Sources */,
 				C7E3677B2202FF220048951B /* ImageClassificationViewController.swift in Sources */,
@@ -360,6 +454,7 @@
 		};
 		C7B9DBD721E323AA002D71D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 788A882FA44F830CE9D7B54A /* Pods-mfp-Insurance.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +477,7 @@
 		};
 		C7B9DBD821E323AA002D71D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A974F865F2709B654D8ABECB /* Pods-mfp-Insurance.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
