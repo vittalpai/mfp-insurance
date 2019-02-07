@@ -44,7 +44,7 @@ class ImageClassificationViewController: UIViewController {
             //let model = try VNCoreMLModel(for: watson_tools().model)
             
             //  Uncomment this line to use the plants model.
-            var model = try VNCoreMLModel(for: watson().model)
+            var model = try VNCoreMLModel(for: insurance().model)
             
             
             
@@ -153,7 +153,16 @@ class ImageClassificationViewController: UIViewController {
     }
     
     func fetchDamageAmount(damageType: String) -> Int {
-        return 25000 ;
+        if (damageType.lowercased() == "vandalism") {
+           return 800
+        } else if (damageType.lowercased() == "broken windshield") {
+            return 1000
+        } else if (damageType.lowercased() == "flat tyre") {
+            return 200
+        } else if (damageType.lowercased() == "motorcycle accident") {
+            return 3000
+        }
+        return 100;
     }
     
     // MARK: - Photo Actions
