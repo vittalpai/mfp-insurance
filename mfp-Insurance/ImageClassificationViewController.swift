@@ -29,6 +29,11 @@ class ImageClassificationViewController: UIViewController {
     @IBOutlet weak var classificationLabel: UILabel!
     static var path:String = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first!
     
+    
+    override func viewDidLoad() {
+         super.viewDidLoad()
+    }
+    
     // MARK: - Image Classification
     
     lazy var classificationRequest: VNCoreMLRequest = {
