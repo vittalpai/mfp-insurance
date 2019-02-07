@@ -160,7 +160,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7c8-K2-8YG" kind="show" id="kwl-Wh-tuX"/>
+                                    <segue destination="BBl-Xq-sRP" kind="show" id="JGs-nI-muV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WT9-Xa-QUP">
@@ -173,9 +173,6 @@
                                 <state key="normal" title="Submit Report">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BBl-Xq-sRP" kind="show" id="9Rf-q8-nX3"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T35-em-y5z">
                                 <rect key="frame" x="51" y="624" width="312" height="43"/>
@@ -260,7 +257,7 @@
             </objects>
             <point key="canvasLocation" x="2786.4000000000001" y="22.167487684729064"/>
         </scene>
-        <!--Car Damage Analyzer-->
+        <!--Analyzer-->
         <scene sceneID="uds-uC-fuW">
             <objects>
                 <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7c8-K2-8YG" customClass="ImageClassificationViewController" customModule="mfp_Insurance" sceneMemberID="viewController">
@@ -283,9 +280,9 @@
                                 </items>
                             </toolbar>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vzf-sb-Ob9">
-                                <rect key="frame" x="0.0" y="647" width="414" height="45"/>
+                                <rect key="frame" x="0.0" y="647.66666666666663" width="414" height="44.333333333333371"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZwK-92-rX2">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Choose a car pic to analyze a damage" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SI-9b-sEi">
@@ -322,7 +319,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pfj-AC-VHx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Car Damage Analyzer" id="PyD-YP-OnM"/>
+                    <navigationItem key="navigationItem" title="Analyzer" id="PyD-YP-OnM"/>
                     <connections>
                         <outlet property="cameraButton" destination="fqF-bV-6n7" id="x1X-b6-5Qb"/>
                         <outlet property="classificationLabel" destination="7SI-9b-sEi" id="QVZ-5A-NYL"/>
@@ -331,12 +328,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIO-mW-cIS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3658" y="20"/>
+            <point key="canvasLocation" x="4541" y="24"/>
         </scene>
         <!--Damage Analyzer-->
         <scene sceneID="68r-mW-rpj">
             <objects>
-                <viewController title="Damage Analyzer" id="BBl-Xq-sRP" sceneMemberID="viewController">
+                <viewController title="Damage Analyzer" id="BBl-Xq-sRP" customClass="AnalyzerViewController" customModule="mfp_Insurance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vb5-6m-4wq"/>
                         <viewControllerLayoutGuide type="bottom" id="Reu-kg-78S"/>
@@ -352,6 +349,9 @@
                                 <state key="normal" title="Analyze">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7c8-K2-8YG" kind="show" id="Pt9-FI-zLw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAg-Kh-wwp">
                                 <rect key="frame" x="205" y="646" width="209" height="41"/>
@@ -360,6 +360,9 @@
                                 <state key="normal" title="Submit Report">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitReport:" destination="BBl-Xq-sRP" eventType="touchUpInside" id="lNk-VN-olE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Number :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtW-YG-RvB" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="49" y="105" width="127" height="30"/>
@@ -390,45 +393,61 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EMl-gG-JLU">
-                                <rect key="frame" x="0.0" y="199" width="414" height="429"/>
+                                <rect key="frame" x="0.0" y="199" width="414" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.1450980392" green="0.28235294119999998" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="61" id="W8n-yK-bmc">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="61"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="prototype" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="prototype" rowHeight="75" id="W8n-yK-bmc" customClass="DamageViewCell" customModule="mfp_Insurance">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W8n-yK-bmc" id="t4S-zN-uzf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Windsheild Broken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-Ez-kW4">
-                                                    <rect key="frame" x="14" y="21" width="221" height="20"/>
+                                                    <rect key="frame" x="20" y="18" width="243" height="38"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5000 $" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zo-Gw-9UJ">
-                                                    <rect key="frame" x="306" y="23" width="101" height="14"/>
+                                                    <rect key="frame" x="273" y="18" width="121" height="38"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cost" destination="6Zo-Gw-9UJ" id="3cd-sl-Z6M"/>
+                                            <outlet property="type" destination="cSn-Ez-kW4" id="T4I-cf-RZZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Cost : 50,000 $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGF-g2-IoF" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="114" y="599" width="186" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1450980392" green="0.28235294119999998" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="EMl-gG-JLU" id="w9d-z2-seB"/>
+                        <outlet property="totalcostlabel" destination="rGF-g2-IoF" id="JFw-8r-F7v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPX-PW-nxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4605.7971014492759" y="43.206521739130437"/>
+            <point key="canvasLocation" x="3672" y="20"/>
         </scene>
     </scenes>
     <resources>

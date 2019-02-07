@@ -128,30 +128,35 @@ class ImageClassificationViewController: UIViewController {
                 //self.classificationLabel.text = "Classification: " + classifications[0].identifier
                 var message = ""
                 if ( classifications[0].identifier != "Negative" ) {
-                    message = "Damage Type : " + classifications[0].identifier + "\n" + "Approximate Cost : " + self.fetchDamageAmount(damageType: classifications[0].identifier);
+                    message = "Damage Type : " + classifications[0].identifier + "\n" + "Approximate Cost : " + String(self.fetchDamageAmount(damageType: classifications[0].identifier));
+                    let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Add", style: UIAlertAction.Style.default, handler: {(alert: UIAlertAction!) in
+                        var carDamage = Damage.init(type: classifications[0].identifier, cost:  self.fetchDamageAmount(damageType: classifications[0].identifier))
+                        AnalyzerViewController.damagelist.append(carDamage)
+                        self.navigationController?.popViewController(animated: true)
+                    }))
+                    alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {(alert: UIAlertAction!) in
+                        self.classificationLabel.text = "Choose a car pic to analyze a damage"
+                    }))
+                    self.present(alert, animated: true, completion: nil)
                 }
                 else {
                    message = "Looks like there is no damage"
+                    let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OkAY", style: UIAlertAction.Style.cancel, handler: {(alert: UIAlertAction!) in
+                        self.classificationLabel.text = "Choose a car pic to analyze a damage"
+                    }))
+                    self.present(alert, animated: true, completion: nil)
                 }
                 
 //                self.classificationLabel.text = "Classification: \(classifications[0].identifier) \nConfidence Level : \(classifications[0].confidence*100) %"
-                let alert = UIAlertController(title: "Report", message: message, preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Submit Report", style: UIAlertAction.Style.default, handler: {(alert: UIAlertAction!) in
-                    self.navigationController?.popViewController(animated: true)
-                }))
-                
-                
-                
-                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {(alert: UIAlertAction!) in
-                   self.classificationLabel.text = "Choose a car pic to analyze a damage"
-                }))
-                self.present(alert, animated: true, completion: nil)
+              
             }
         }
     }
     
-    func fetchDamageAmount(damageType: String) -> String {
-        return "$25,000" ;
+    func fetchDamageAmount(damageType: String) -> Int {
+        return 25000 ;
     }
     
     // MARK: - Photo Actions
