@@ -27,7 +27,6 @@ class ImageClassificationViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var classificationLabel: UILabel!
-    static var path:String = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first!
     
     
     override func viewDidLoad() {
@@ -50,7 +49,7 @@ class ImageClassificationViewController: UIViewController {
             
             let fileManager = FileManager.default
             
-            let itemsArray = fileManager.listFiles(path: ImageClassificationViewController.path);
+            let itemsArray = fileManager.listFiles(path: HomeViewController.path);
             var filterdItemsArray = [URL]()
             func filterContentForSearchText(searchText: String) {
                 filterdItemsArray = itemsArray.filter { item in
@@ -84,26 +83,22 @@ class ImageClassificationViewController: UIViewController {
         DispatchQueue.global(qos: .userInitiated).async {
             let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
             DispatchQueue.main.async {
-                WLClient.sharedInstance()?.downloadModelUpdate(completionHandler: { (status,resp) in
-                    if(resp != nil && status != nil) {
-                        print("votta" + status!);
-                        ImageClassificationViewController.path = resp!
-                    } else if(resp == nil && status != nil) {
-                        let alert = UIAlertController(title: "Alert", message: "This Model is not authentic or might be corrupted", preferredStyle: UIAlertController.Style.alert)
-                        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil))
-                     //   self.present(alert, animated: true, completion: nil)
-                    }
-                    do {
-                        try handler.perform([self.classificationRequest])
-                    } catch {
-                        /*
-                         This handler catches general image processing errors. The `classificationRequest`'s
-                         completion handler `processClassifications(_:error:)` catches errors specific
-                         to processing that request.
-                         */
-                        print("Failed to perform classification.\n\(error.localizedDescription)")
-                    }
-                }, showProgressBar: false)
+                do {
+                    try handler.perform([self.classificationRequest])
+                } catch {
+                    print("Failed to perform classification.\n\(error.localizedDescription)")
+                }
+//                WLClient.sharedInstance()?.downloadModelUpdate(completionHandler: { (status,resp) in
+//                    if(resp != nil && status != nil) {
+//                        print("votta" + status!);
+//                        HomeViewController.path = resp!
+//                    } else if(resp == nil && status != nil) {
+//                        let alert = UIAlertController(title: "Alert", message: "This Model is not authentic or might be corrupted", preferredStyle: UIAlertController.Style.alert)
+//                        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil))
+//                     //   self.present(alert, animated: true, completion: nil)
+//                    }
+//
+//                }, showProgressBar: false)
              }
         }
     }

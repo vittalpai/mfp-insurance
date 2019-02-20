@@ -10,12 +10,17 @@ import UIKit
 import IBMMobileFirstPlatformFoundation
 
 class HomeViewController: UIViewController {
+    
+        static var path:String = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first!
 
     override func viewDidLoad() {
         navigationItem.hidesBackButton = true
         super.viewDidLoad()
         // Check for model update
         WLClient.sharedInstance()?.downloadModelUpdate(completionHandler: { (status, response) in
+            if (status != nil && response != nil) {
+                HomeViewController.path = response!
+            }
         }, showProgressBar: true)
     }
 
