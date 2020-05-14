@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		69F8198ED18F938108D35EBF /* Pods_mfp_Insurance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20E32B19A146493E04A9593 /* Pods_mfp_Insurance.framework */; };
+		0CD02008244C2A5500A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD02002244C2A4700A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdate.framework */; };
+		25575D34D6CF3F35C147D09E /* Pods_mfp_Insurance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916E28ED8AA01AACE3B37421 /* Pods_mfp_Insurance.framework */; };
 		C7342391220C0D1D00211373 /* mfpclient.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7342390220C0D1C00211373 /* mfpclient.plist */; };
 		C7342395220C376600211373 /* insurance.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C7342394220C376600211373 /* insurance.mlmodel */; };
 		C7342397220C40C200211373 /* Damage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7342396220C40C200211373 /* Damage.swift */; };
@@ -34,6 +35,30 @@
 		C7E3678522030F470048951B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3678422030F470048951B /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0CD02001244C2A4700A4A193 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CD01FFC244C2A4700A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A2AB438E1C55095100ADEBD3;
+			remoteInfo = IBMMobileFirstPlatformFoundationLiveUpdate;
+		};
+		0CD02003244C2A4700A4A193 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CD01FFC244C2A4700A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D4AB13931D1944DB004ABDEE;
+			remoteInfo = IBMMobileFirstPlatformFoundationLiveUpdateTests;
+		};
+		0CD02005244C2A5000A4A193 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CD01FFC244C2A4700A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdate.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A2AB438D1C55095100ADEBD3;
+			remoteInfo = IBMMobileFirstPlatformFoundationLiveUpdate;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		C7E36783220303800048951B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -48,8 +73,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		788A882FA44F830CE9D7B54A /* Pods-mfp-Insurance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mfp-Insurance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance.debug.xcconfig"; sourceTree = "<group>"; };
-		A974F865F2709B654D8ABECB /* Pods-mfp-Insurance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mfp-Insurance.release.xcconfig"; path = "Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance.release.xcconfig"; sourceTree = "<group>"; };
+		0CD01FFC244C2A4700A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdate.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IBMMobileFirstPlatformFoundationLiveUpdate.xcodeproj; path = "../mfp-live-update-ios-sdk/IBMMobileFirstPlatformFoundationLiveUpdate/IBMMobileFirstPlatformFoundationLiveUpdate.xcodeproj"; sourceTree = "<group>"; };
+		5CB1817A490DA1AE1DA58126 /* Pods-mfp-Insurance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mfp-Insurance.debug.xcconfig"; path = "Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance.debug.xcconfig"; sourceTree = "<group>"; };
+		916E28ED8AA01AACE3B37421 /* Pods_mfp_Insurance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mfp_Insurance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7342390220C0D1C00211373 /* mfpclient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mfpclient.plist; sourceTree = "<group>"; };
 		C7342394220C376600211373 /* insurance.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = insurance.mlmodel; sourceTree = "<group>"; };
 		C7342396220C40C200211373 /* Damage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damage.swift; sourceTree = "<group>"; };
@@ -76,7 +102,7 @@
 		C7E367792202FF210048951B /* ImageClassificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationViewController.swift; sourceTree = "<group>"; };
 		C7E3677A2202FF220048951B /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		C7E3678422030F470048951B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		D20E32B19A146493E04A9593 /* Pods_mfp_Insurance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mfp_Insurance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBE06258169B5E6DDF75061C /* Pods-mfp-Insurance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mfp-Insurance.release.xcconfig"; path = "Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,19 +110,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69F8198ED18F938108D35EBF /* Pods_mfp_Insurance.framework in Frameworks */,
+				0CD02008244C2A5500A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdate.framework in Frameworks */,
+				25575D34D6CF3F35C147D09E /* Pods_mfp_Insurance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B1CE34B5FCD56BC63ACA3FB /* Frameworks */ = {
+		0CD01FFD244C2A4700A4A193 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D20E32B19A146493E04A9593 /* Pods_mfp_Insurance.framework */,
+				0CD02002244C2A4700A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdate.framework */,
+				0CD02004244C2A4700A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CD02007244C2A5500A4A193 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				916E28ED8AA01AACE3B37421 /* Pods_mfp_Insurance.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C4F3F4B519D9856906F7342 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CB1817A490DA1AE1DA58126 /* Pods-mfp-Insurance.debug.xcconfig */,
+				FBE06258169B5E6DDF75061C /* Pods-mfp-Insurance.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		C796999721E32DB000B4E7C2 /* Images */ = {
@@ -119,11 +165,12 @@
 		C7B9DBBB21E323A7002D71D7 = {
 			isa = PBXGroup;
 			children = (
+				0CD01FFC244C2A4700A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdate.xcodeproj */,
 				C7342390220C0D1C00211373 /* mfpclient.plist */,
 				C7B9DBC621E323A7002D71D7 /* mfp-Insurance */,
 				C7B9DBC521E323A7002D71D7 /* Products */,
-				CCFAAD70A59BAF06CFDA240F /* Pods */,
-				3B1CE34B5FCD56BC63ACA3FB /* Frameworks */,
+				0CD02007244C2A5500A4A193 /* Frameworks */,
+				7C4F3F4B519D9856906F7342 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,15 +204,6 @@
 			path = "mfp-Insurance";
 			sourceTree = "<group>";
 		};
-		CCFAAD70A59BAF06CFDA240F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				788A882FA44F830CE9D7B54A /* Pods-mfp-Insurance.debug.xcconfig */,
-				A974F865F2709B654D8ABECB /* Pods-mfp-Insurance.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,17 +211,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7B9DBD621E323AA002D71D7 /* Build configuration list for PBXNativeTarget "mfp-Insurance" */;
 			buildPhases = (
-				C2F7282A93EF7B4E485B4B9D /* [CP] Check Pods Manifest.lock */,
+				FEC6B76EBF0E06B9D8473B29 /* [CP] Check Pods Manifest.lock */,
 				C7B9DBC021E323A7002D71D7 /* Sources */,
 				C7B9DBC121E323A7002D71D7 /* Frameworks */,
 				C7B9DBC221E323A7002D71D7 /* Resources */,
 				C7E36783220303800048951B /* Embed Frameworks */,
-				8A0997889FFA68EFEEF9CF9A /* [CP] Embed Pods Frameworks */,
-				90F1B5324C37B81E95119D61 /* [CP] Copy Pods Resources */,
+				806D897D76334C5601705780 /* [CP] Embed Pods Frameworks */,
+				9F1A6F140C606A0952DE1221 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0CD02006244C2A5000A4A193 /* PBXTargetDependency */,
 			);
 			name = "mfp-Insurance";
 			productName = "mfp-Insurance";
@@ -216,12 +255,35 @@
 			mainGroup = C7B9DBBB21E323A7002D71D7;
 			productRefGroup = C7B9DBC521E323A7002D71D7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0CD01FFD244C2A4700A4A193 /* Products */;
+					ProjectRef = 0CD01FFC244C2A4700A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdate.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C7B9DBC321E323A7002D71D7 /* mfp-Insurance */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0CD02002244C2A4700A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdate.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = IBMMobileFirstPlatformFoundationLiveUpdate.framework;
+			remoteRef = 0CD02001244C2A4700A4A193 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CD02004244C2A4700A4A193 /* IBMMobileFirstPlatformFoundationLiveUpdateTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = IBMMobileFirstPlatformFoundationLiveUpdateTests.xctest;
+			remoteRef = 0CD02003244C2A4700A4A193 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C7B9DBC221E323A7002D71D7 /* Resources */ = {
@@ -248,51 +310,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8A0997889FFA68EFEEF9CF9A /* [CP] Embed Pods Frameworks */ = {
+		806D897D76334C5601705780 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-frameworks.sh",
-				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Frameworks/IBMMobileFirstPlatformFoundation.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBMMobileFirstPlatformFoundation.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		90F1B5324C37B81E95119D61 /* [CP] Copy Pods Resources */ = {
+		9F1A6F140C606A0952DE1221 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-resources.sh",
-				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Resources/Localizations.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Localizations.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mfp-Insurance/Pods-mfp-Insurance-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2F7282A93EF7B4E485B4B9D /* [CP] Check Pods Manifest.lock */ = {
+		FEC6B76EBF0E06B9D8473B29 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -335,6 +387,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CD02006244C2A5000A4A193 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IBMMobileFirstPlatformFoundationLiveUpdate;
+			targetProxy = 0CD02005244C2A5000A4A193 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C796999421E32D6A00B4E7C2 /* Main.storyboard */ = {
@@ -474,11 +534,11 @@
 		};
 		C7B9DBD721E323AA002D71D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 788A882FA44F830CE9D7B54A /* Pods-mfp-Insurance.debug.xcconfig */;
+			baseConfigurationReference = 5CB1817A490DA1AE1DA58126 /* Pods-mfp-Insurance.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TN6YQNGLXP;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mfp-Insurance",
@@ -488,8 +548,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mfp-Insurance";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfp.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -497,11 +558,11 @@
 		};
 		C7B9DBD821E323AA002D71D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A974F865F2709B654D8ABECB /* Pods-mfp-Insurance.release.xcconfig */;
+			baseConfigurationReference = FBE06258169B5E6DDF75061C /* Pods-mfp-Insurance.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TN6YQNGLXP;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mfp-Insurance",
@@ -511,8 +572,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mfp-Insurance";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfp.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

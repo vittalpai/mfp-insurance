@@ -12,6 +12,7 @@ class AnalyzerViewController: UIViewController, UITableViewDelegate, UITableView
     
     // cell reuse id (cells that scroll out of view can be reused)
     let cellReuseIdentifier = "prototype"
+    static var backgroundColor:String?
     
     @IBOutlet weak var totalcostlabel: UILabel!
     // don't forget to hook this up from the storyboard
@@ -20,7 +21,11 @@ class AnalyzerViewController: UIViewController, UITableViewDelegate, UITableView
     static var damagelist: [Damage] = [Damage]()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+       
+        if (AnalyzerViewController.backgroundColor != nil && AnalyzerViewController.backgroundColor != "nil" ) {
+            self.view.backgroundColor = UIColor(hexString: AnalyzerViewController.backgroundColor!)
+        }
+              
         var cost:Int = 0
         for damage in AnalyzerViewController.damagelist {
              cost = cost + damage.cost
@@ -34,7 +39,8 @@ class AnalyzerViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.rowHeight = 84
         tableView.delegate = self
         tableView.dataSource = self
-        navigationItem.hidesBackButton = true
+        
+        super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,4 +88,21 @@ class AnalyzerViewController: UIViewController, UITableViewDelegate, UITableView
         print("You tapped cell number \(indexPath.row).")
     }
     
+}
+
+
+extension UIColor {
+    convenience init?(hexString: String) {
+        var chars = Array(hexString.hasPrefix("#") ? hexString.dropFirst() : hexString[...])
+        switch chars.count {
+        case 3: chars = chars.flatMap { [$0, $0] }; fallthrough
+        case 6: chars = ["F","F"] + chars
+        case 8: break
+        default: return nil
+        }
+        self.init(red: .init(strtoul(String(chars[2...3]), nil, 16)) / 255,
+                green: .init(strtoul(String(chars[4...5]), nil, 16)) / 255,
+                 blue: .init(strtoul(String(chars[6...7]), nil, 16)) / 255,
+                alpha: .init(strtoul(String(chars[0...1]), nil, 16)) / 255)
+    }
 }

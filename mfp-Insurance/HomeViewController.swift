@@ -8,20 +8,31 @@
 
 import UIKit
 import IBMMobileFirstPlatformFoundation
+import IBMMobileFirstPlatformFoundationLiveUpdate
 
 class HomeViewController: UIViewController {
     
-        static var path:String = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first!
+    @IBOutlet weak var damageAnalyzerButton: UIButton!
+    
+    static var path:String = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first!
+
 
     override func viewDidLoad() {
         navigationItem.hidesBackButton = true
         super.viewDidLoad()
-        // Check for model update
-        WLClient.sharedInstance()?.downloadModelUpdate(completionHandler: { (status, response) in
-            if (status != nil && response != nil) {
-                HomeViewController.path = response!
+        
+        //hide button by default
+        damageAnalyzerButton.isHidden = true
+        
+        LiveUpdateManager.sharedInstance.obtainConfiguration(useCache: false) { (configuration, error) in
+            if (error == nil) {
+                if(configuration?.isFeatureEnabled("analyzerFeature") ?? false) {
+                    self.damageAnalyzerButton.setTitle(configuration?.getProperty("buttonLabel") ?? "Damage Analyzer", for: .normal)
+                    AnalyzerViewController.backgroundColor = configuration?.getProperty("backgroundColor") ?? nil
+                    self.damageAnalyzerButton.isHidden = false
+                }
             }
-        }, showProgressBar: true)
+        }
     }
 
     @IBAction func logout(_ sender: Any) {
