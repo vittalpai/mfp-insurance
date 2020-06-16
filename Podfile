@@ -1,6 +1,9 @@
-use_frameworks!
 
-platform :ios, 8.0
-target "mfp-Insurance" do
+
+target "employee-exp" do
+    use_frameworks!
+
     pod 'IBMMobileFirstPlatformFoundation'
+    pod 'IBMMobileFirstPlatformFoundationLiveUpdate'
+    pod 'IBMMobileFirstPlatformFoundationPush'
 end

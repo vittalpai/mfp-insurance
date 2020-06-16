@@ -1,16 +1,26 @@
 PODS:
-  - IBMMobileFirstPlatformFoundation (8.0.2019012808)
+  - IBMMobileFirstPlatformFoundation (8.0.2020052711)
+  - IBMMobileFirstPlatformFoundationLiveUpdate (8.0.202005041257):
+    - IBMMobileFirstPlatformFoundation (~> 8.0)
+  - IBMMobileFirstPlatformFoundationPush (8.0.2019082914):
+    - IBMMobileFirstPlatformFoundation (~> 8.0)
 
 DEPENDENCIES:
   - IBMMobileFirstPlatformFoundation
+  - IBMMobileFirstPlatformFoundationLiveUpdate
+  - IBMMobileFirstPlatformFoundationPush
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - IBMMobileFirstPlatformFoundation
+    - IBMMobileFirstPlatformFoundationLiveUpdate
+    - IBMMobileFirstPlatformFoundationPush
 
 SPEC CHECKSUMS:
-  IBMMobileFirstPlatformFoundation: 5aa253f5e4e6fdd095b86a5146a07d28622f233a
+  IBMMobileFirstPlatformFoundation: 4daa56ad768b8a17fe31f8e90b587c5307e6cf38
+  IBMMobileFirstPlatformFoundationLiveUpdate: 77e0483cc7b8a67f42e5324374f3fa8d861aa61c
+  IBMMobileFirstPlatformFoundationPush: bcc4d7d3bbde63f140a03c8fd68ebbc536edb0ad
 
-PODFILE CHECKSUM: ee17a5d662cb232f1c173742a75890850a895d30
+PODFILE CHECKSUM: cab67a89c31825a56a4fa285985b19fb19ec5da4
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.1
